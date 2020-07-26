@@ -59,9 +59,8 @@ def main():
 			program= Weather(city_name,latitude,longhitude,temperature,wind_speed,cloud_type,atm_pressure,humidity)
 			
 			print(program.DisplayWeather())
-
 		except:
-			city_name == "Q"
+			city_name=='Q'
 			break
 
 main()
