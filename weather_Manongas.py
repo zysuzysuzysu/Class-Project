@@ -59,8 +59,9 @@ def main():
 			program= Weather(city_name,latitude,longhitude,temperature,wind_speed,cloud_type,atm_pressure,humidity)
 			
 			print(program.DisplayWeather())
+		
 		except:
-			city_name=='Q'
+			print("\n\t\tSorry the connection was unsuccessful! Please try again!")
 			break
 
 main()
