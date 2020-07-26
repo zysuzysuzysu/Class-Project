@@ -40,10 +40,7 @@ def main():
 		city_name=city_name.title()
 		city_name=city_name.strip()
 
-		if city_name == "Q":
-			break
-
-		else:
+		try:
 			api_token = '90156034a9cd88f0fd43039c52350eaf'
 			api_url_base = f'https://api.openweathermap.org/data/2.5/weather?q={city_name}&units=imperial&appid={api_token}'
 			
@@ -62,5 +59,9 @@ def main():
 			program= Weather(city_name,latitude,longhitude,temperature,wind_speed,cloud_type,atm_pressure,humidity)
 			
 			print(program.DisplayWeather())
+
+		except:
+			city_name == "Q"
+			break
 
 main()
